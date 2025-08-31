@@ -35,6 +35,8 @@ async def main():
         else ("python", ["mcp_server.py"])
     )
 
+
+
     async with AsyncExitStack() as stack:
         doc_client = await stack.enter_async_context(
             MCPClient(command=command, args=args)
